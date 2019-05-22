@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#444"
+        app:layoutDescription="@xml/youtube_scene"
+        tools:context=".MainActivity"
+        tools:ignore="contentDescription">
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_back"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#080"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/top_image_container"
+            android:layout_width="match_parent"
+            android:background="?android:attr/windowBackground"
+            android:layout_height="320dp"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+            android:id="@+id/top_image"
+            android:layout_width="0dp"
+            android:src="@drawable/cat_1"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="@id/top_image_container"
+            app:layout_constraintStart_toStartOf="@id/top_image_container"
+            app:layout_constraintEnd_toEndOf="@id/top_image_container"
+            app:layout_constraintBottom_toBottomOf="@id/top_image_container"/>
+
+    <FrameLayout
+            android:id="@+id/recycler_view_container"
+            android:background="?android:attr/windowBackground"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/top_image_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_front"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@id/top_image_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
